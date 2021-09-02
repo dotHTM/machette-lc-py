@@ -1,0 +1,19 @@
+{
+  "folders": [
+  {
+    "path": "."
+  }],
+  "build_systems": [
+  {
+    "name": "Pip Build",
+    "shell_cmd": "python3 -m pip install --upgrade build; python3 -m build",
+    "working_dir": "$project_path"
+  },
+  {
+    "name": "PyPI Upload",
+    "shell_cmd": "python3 -m twine upload --repository testpypi dist/*",
+    "working_dir": "$project_path"
+  },
+  
+]
+}
